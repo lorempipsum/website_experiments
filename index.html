@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Basic CSS Experiments</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="evenColumns evenRows grid">
+
+
+
+  <!-- First Viewport. Light Yellowish -->
+  <div
+    class="sunBackground evenColumns evenRows grid viewportWidth">
+
+    <!-- The 2,1 (Middle Top) Cell -->
+    <div class="evenColumns evenRows grid vTop hCenter">
+      <h1 class="centerText hCenter vCenter">
+        Resurgence
+      </h1>
+    </div>
+
+    <!-- The 2,2 (Middle Middle) Cell-->
+    <div
+      class="evenColumns flexMiddleRow grid vCenter hCenter">
+      <div class="centerText hCenter vCenter">
+        <div>
+          <div class="drawRedCircle"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- The 2,3 (Middle bot) Cell-->
+
+    <div class="evenColumns evenRows grid vBot hCenter">
+      <p class="centerText hCenter vBot">
+        This is the beginning of something great.
+      </p>
+    </div>
+
+
+  </div>
+
+
+
+  <div
+    class="forestBackground evenColumns evenRows grid vCenter viewportWidth">
+
+    <!-- The 2,1 (Middle Top) Cell -->
+    <div class="twoOneratioColumns evenRows grid hCenter">
+      <h1 class="bottomLeft justifyCenter">
+        <span>The Window</span>
+      </h1>
+    </div>
+
+    <!-- The 2,2 (Middle Middle) WINDOW Cell -->
+    <div class="evenColumns flexMiddleRow grid hCenter ">
+      <div class="window openBlinds hCenter vCenter">
+      </div>
+      <div class="backgroundScene hCenter vCenter">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+
+      </div>
+
+    </div>
+
+    <!-- The 2,3 (Middle Bottom) FOOTER Cell -->
+
+    <div
+      class="flexMiddleColumn flexMiddleRow grid vBot hCenter">
+      <p id="script-victim"
+        class="centerText hCenter vCenter">
+        Hold down the left mouse button to peer through the
+        window.
+      </p>
+    </div>
+  </div>
+
+
+
+
+  <div
+    class="dirtBackground evenColumns evenRows grid vBot viewportWidth">
+    <div class="evenColumns evenRows grid hCenter">
+      <h1 style="color: #221E1D;"
+        class="centerText hCenter vCenter">
+        Waypoints
+      </h1>
+    </div>
+
+      <div class="grid hCenter vCenter size-third-vw">
+    <p id="compatability-badge" class="right boxed">
+      Compatability
+    </p>
+    <p id="lastModified-badge" class="left boxed">
+      LastModified
+    </p>
+    <p  class="right boxed">
+      <span id="charSet-badge">
+      Charset</span>
+    </p>
+    <p id="readyState-badge" class="left boxed">
+      readyState
+    </p>
+  </div>
+
+
+  <div
+    class="flexMiddleColumn flexMiddleRow grid vBot hCenter">
+    <p class="centerText hCenter vCenter">
+      A guide for your time here.
+    </p>
+  </div>
+  </div>
+</body>
+<script>
+  const showDate = () => {
+    const lastModifiedTime = document.lastModified;
+  };
+
+  window.setInterval(showDate, 100);
+  // returns CSS1Compat for conforming document
+  document.getElementById("compatability-badge").innerHTML = document.compatMode;
+  document.getElementById("lastModified-badge").innerHTML = document.lastModified;
+  document.getElementById("charSet-badge").innerHTML = document.charset;
+  document.getElementById("readyState-badge").innerHTML = document.readyState;
+
+</script>
+
+</html>
