@@ -24,12 +24,17 @@
   grid-template-rows: auto auto fit-content(200px);
 }
 
+.flexAllRows {
+    grid-template-rows: minmax(0, auto) minmax(0, auto) minmax(0, auto) minmax(0, auto);
+    
+}
+
 .flexMiddleRow {
-    grid-template-rows: auto fit-content(200px) auto;
+    grid-template-rows: minmax(0, auto) fit-content(600px) minmax(0, auto);
 }
 
 .flexMiddleColumn {
-    grid-template-columns: auto fit-content(50ch) auto;
+    grid-template-columns: minmax(0, auto) fit-content(600px) minmax(0, auto);
 }
 
 .viewportWidth {
@@ -67,6 +72,8 @@
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row: 2;
+  align-items: center;
+
 }
 
 .wholeRow {
@@ -106,15 +113,19 @@
   display: flex;
   padding: 5px;
   align-items: center;
+  max-height: 1em;
+  min-width: fit-content(60ch);
+  white-space: nowrap;
 }
 
 .size-third-vw {
-  width: 33vw;
-  max-width: 600px;
-  
+  height: 33vh;
+  width: inherit;
+  max-width: 800px;
 }
 
 .left {
+  margin-left: 2em;
   grid-column-start: 1;
   grid-column-end: 3;
   justify-self: left;
@@ -133,6 +144,8 @@
 
 
 .right {
+    margin-right: 2em;
+
     font-size: 2em;
   grid-column-start: 1;
   grid-column-end: 3;  
@@ -147,6 +160,18 @@
   border-radius: 50%;
   display: inline-block;
   background-color: red;
+}
+
+.alignItemsCenter {
+  align-items: center;
+}
+
+.alignContentCenter {
+  align-content: center;
+}
+
+.justifyItemsCenter {
+  justify-self: center;
 }
 
 .centerVertical {
@@ -165,9 +190,13 @@
 
 .dirtBackground {
 background-color: #ECEAE0;
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-  justify-items: center;
+justify-items: center;
   
+}
+
+.rockBackground {
+background-color: #e8e0ec;
+
 }
 
 .colours {
@@ -256,5 +285,9 @@ li {
 }
 
 body {
+  margin: 0;
+}
+
+p {
   margin: 0;
 }
