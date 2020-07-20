@@ -255,7 +255,6 @@ li {
   list-style-type: none;
 }
 
-.span {
-vertical-align: middle;
-
+body {
+  margin: 0;
 }
